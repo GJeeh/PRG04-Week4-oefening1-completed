@@ -25,3 +25,13 @@ bird {
     width:67px; height:110px;
     background-image: url('../images/bird.png');
 }
+
+gun {
+    width:54px; height:44px;
+    background-image: url('../images/gun.png');
+}
+
+bullet {
+    width:22px; height:22px;
+    background-image: url('../images/bullet.png');
+}

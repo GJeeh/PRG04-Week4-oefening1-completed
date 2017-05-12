@@ -1,4 +1,4 @@
-/// <reference path="bird.ts" />
+/// <reference path="chicken.ts" />
 
 class Tree {
     
@@ -8,37 +8,37 @@ class Tree {
     public y:number;
     public width:number;
     public height:number;
+    private speed:number;
+
+    private chickens:Array<Chicken>;
     
-    // dit zijn variabelen voor de vogels, bv:
-    private bird1: Bird;
-    
-    constructor() {
+    constructor(x:number, y:number, g:Game) {
         this.div = document.createElement("tree");
         document.body.appendChild(this.div);
-                
+        
+        this.speed = Math.random() * 4 + 1;
         this.width = 414;
         this.height = 86;
-        this.x = 0 - this.width;
-        this.y = 100;
+        this.x = x;
+        this.y = y;
         
-        //
-        // maak hier twee vogels aan met het keyword new
-        // geef elke vogel zijn eigen positie mee
-        // wat moet je nog meer aan de vogel geven behalve de positie?
-        // 
+        this.chickens = new Array<Chicken>();
+        this.chickens.push(new Chicken(20,-70, this, g),new Chicken(120,-70, this, g),new Chicken(200,-70, this, g));
     }
     
     
     
-    public update():void {
-        // vaste snelheid. hier kan je ook een eigenschap van maken
-        this.x += 4;
+    public move():void {
+        this.x += this.speed;
         
-        // als we uit beeld gaan, dan links plaatsen
-        if(this.x > window.innerWidth) this.x = 0 - this.width;
-        
+        if(this.x > window.innerWidth) this.resetChickens();
 
         this.div.style.transform = "translate("+this.x+"px, "+this.y+"px)";
+    }
+
+    private resetChickens():void{
+        this.x = 0 - this.width;
+        // hier weggeschoten kippen weer terug zetten
     }
 
 }
