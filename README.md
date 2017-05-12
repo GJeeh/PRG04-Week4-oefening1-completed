@@ -1,5 +1,7 @@
 # Een kip op een vlot - completed
 
+![Chickens](docs/images/fireatwill.png?raw=true "Fire at will")
+
 ## Opdracht 1
 
 - Maak meerdere vloten aan in game.ts
