@@ -20,12 +20,17 @@
 
 De gun vuurt kogels af. Deze kogels moeten in beeld blijven als de kip en de gun weg zijn. Daarom voegen we de bullets toe aan de main game, en niet aan de gun. De bullets staan op hetzelfde niveau als de rafts. 
 
-- De `fire()` functie van de gun maakt een nieuwe bullet aan: `let b:Bullet = new Bullet(x,y);`
-- De bullet moet de x en y positie van de kip op het vlot weten, om op de goede plek gezet te worden. Zie voorbeeldcode!
+**game.ts**
+
 - Game.ts krijgt een array voor de bullets.
 - Game.ts roept de `move` functie van de bullets aan.
-- Game.ts heeft een `addBullet()` functie waarmee je kogels aan de game kan toevoegen. 
-- De `fire()` functie van de gun voegt de bullet toe aan game met `this.game.addBullet();`
+- Game.ts heeft een `public addBullet()` functie waarmee je kogels aan de array kan toevoegen. 
+
+**gun.ts**
+
+- De `fire()` functie in Gun.ts maakt een nieuwe bullet aan: `let b:Bullet = new Bullet(x,y);`
+- In gun.ts moet een verwijzing bestaan naar de main game zijn. De bullet geef je vervolgens door met `this.game.addBullet(b);`
+- De bullet moet de x en y positie van de kip op het vlot weten, om op de goede plek gezet te worden. Zie voorbeeldcode!
 
 ### Voorbeeldcode
 
