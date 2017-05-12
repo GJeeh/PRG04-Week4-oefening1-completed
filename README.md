@@ -1,4 +1,4 @@
-# Een kip op een vlot
+# Een kip op een vlot - completed
 
 ## Opdracht 1
 
@@ -18,7 +18,7 @@
 
 ## Opdracht 3
 
-Omdat de bullet moet blijven bestaan als de kip en de gun weg zijn, kan de bullet geen child zijn van de gun. Het is ook niet mooi als de bullet mee beweegt met de gun. Daarom voegen we de bullet toe aan de game, op hetzelfde niveau als de rafts. 
+De gun vuurt kogels af. Deze kogels moeten in beeld blijven als de kip en de gun weg zijn. Daarom voegen we de bullets toe aan de main game, en niet aan de gun. De bullets staan op hetzelfde niveau als de rafts. 
 
 - De `fire()` functie van de gun maakt een nieuwe bullet aan: `let b:Bullet = new Bullet(x,y);`
 - De bullet moet de x en y positie van de kip op het vlot weten, om op de goede plek gezet te worden. Zie voorbeeldcode!
