@@ -34,6 +34,10 @@ De gun vuurt kogels af. Deze kogels moeten in beeld blijven als de kip en de gun
 - In gun.ts moet een verwijzing bestaan naar de main game zijn. De bullet geef je vervolgens door met `this.game.addBullet(b);`
 - De bullet moet de x en y positie van de kip op het vlot weten, om op de goede plek gezet te worden. Zie voorbeeldcode!
 
+## UML
+
+![UML](docs/images/uml.png?raw=true "UML")
+
 ### Voorbeeldcode
 
 #### Verwijzingen doorgeven
